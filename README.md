@@ -1,4 +1,3 @@
-<img width="482" height="695" alt="image" src="https://github.com/user-attachments/assets/0d517ea8-7d21-4f77-829b-c97d87c79276" /># Malaria-Detection
 Malaria Detection with DL
 
 
