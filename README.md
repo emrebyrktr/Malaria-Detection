@@ -1,7 +1,6 @@
-Malaria Detection with DL
 
 
-# Malaria Detection with Deep Learning Models
+# Derin Öğrenme Modelleri ile Sıtma Tespiti
 
 Bu proje, üç farklı hücresel görüntü veri seti kullanılarak sıtma enfeksiyonunun otomatik olarak tespit edilmesini amaçlayan bir derin öğrenme çalışmasını içerir. Her veri seti için ayrı bir model eğitilmiş ve sonuçlar doğruluk oranları üzerinden değerlendirilmiştir.
 
@@ -71,7 +70,7 @@ Veri Seti 2: Trakya Üniversitesi Mikrobiyoloji Laboratuvarı
 
 Veri Seti 3: Hibrit veri seti
 
-## 📊 Sonuçlar (Sadece Accuracy - Makale nedeniyle sınırlı paylaşım)
+## 📊 Sonuçlar (Sadece Doğruluk- Makale nedeniyle sınırlı paylaşım)
 Her veri setine ait en iyi doğruluk sonucu paylaşılmıştır.
 
 Veri Seti 1'e ait en yüksek doğruluk oranı VGG-16 Wft modeline aittir. %97,06' lık doğruluk oranına ulaşılmıştır.
