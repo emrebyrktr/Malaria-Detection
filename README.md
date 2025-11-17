@@ -75,7 +75,9 @@ Veri Seti 3: Hibrit veri seti
 Her veri setine ait en iyi doğruluk sonucu paylaşılmıştır.
 
 Veri Seti 1'e ait en yüksek doğruluk oranı VGG-16 Wft modeline aittir. %97,06' lık doğruluk oranına ulaşılmıştır.
+
 Veri Seti 2'e ait en yüksek doğruluk oranları her modelde aynı gelmiştir. %98,18 'lik doğruluk oranına ulaşılmıştır.
+
 Veri Seti 3'e ait en yüksek doğruluk oranı VGG-16 Wft modeline aittir. %96,85 'lik doğruluk oranına ulaşılmıştır.
 
 > Not: Diğer metrikler (loss, precision, recall, F1-score, MCC vs.) makale yayını nedeniyle paylaşılmamıştır.
