@@ -1,4 +1,4 @@
-
+Makalem henüz yayınlanma aşamasında olduğundan dolayı sadece ilk veri setine ait CNN modelin kodu paylaşılmıştır.
 
 # Derin Öğrenme Modelleri ile Sıtma Tespiti
 
