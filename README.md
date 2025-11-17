@@ -1,84 +1,83 @@
-Makalem henüz yayınlanma aşamasında olduğundan dolayı sadece ilk veri setine ait CNN modelin kodu paylaşılmıştır.
+Since my paper is still in the publication process, only the CNN model code for the first dataset has been shared.
 
-# Derin Öğrenme Modelleri ile Sıtma Tespiti
+# Malaria Detection Using Deep Learning Models
 
-Bu proje, üç farklı hücresel görüntü veri seti kullanılarak sıtma enfeksiyonunun otomatik olarak tespit edilmesini amaçlayan bir derin öğrenme çalışmasını içerir. Her veri seti için ayrı bir model eğitilmiş ve sonuçlar doğruluk oranları üzerinden değerlendirilmiştir.
+This project involves a deep learning study aimed at automatically detecting malaria infection using three different cellular image datasets. A separate model was trained for each dataset, and the results were evaluated based on accuracy scores.
 
 
 ---
 
-## 📁 Kullanılan Veri Setleri
+## 📁 Data sets
 
-Bu projede üç farklı veri seti kullanılmıştır. Her veri setine ait örnek görüntüler aşağıda verilmiştir:
-
-1. Veri Seti – Chittagong Medical College Hospital (Bangladeş)
+1. Dataset – Chittagong Medical College Hospital (Bangladesh)
 <img width="482" height="695" alt="image" src="https://github.com/user-attachments/assets/7a030e5b-1aa0-44dc-9ec5-939542304b89" />
 
-Bu veri seti, Bangladeş Chittagong Tıp Fakültesi Hastanesi’nde takip edilen 150 doğrulanmış sıtma vakasına ait mikroskop görüntülerinden oluşmaktadır. Her görüntü, uzmanlar tarafından etiketlenmiş olup enfekte ve enfekte olmayan hücre yapılarını yüksek çözünürlükte içermektedir. Klinik ortamda elde edildiği için hücre morfolojileri gerçek hasta verilerini yansıtmaktadır.
+This dataset consists of microscope images from 150 confirmed malaria cases monitored at Chittagong Medical College Hospital in Bangladesh. Each image was annotated by medical experts and contains high-resolution cellular structures of both infected and non-infected samples. Since the images were collected in a clinical environment, the cell morphologies accurately represent real patient data.
 
-2. Veri Seti – Trakya Üniversitesi Mikrobiyoloji Laboratuvarı
+2. Dataset – Trakya University Microbiology Laboratory
 <img width="449" height="345" alt="image" src="https://github.com/user-attachments/assets/a80a138e-94fa-489f-908b-4107917d0320" />
 
-Bu veri seti, Trakya Üniversitesi Mikrobiyoloji Bölümü tarafından çeşitli klinik kan örneklerinden hazırlanmış mikroskop görüntülerini içermektedir. Farklı laboratuvar koşullarında boyanmış ve hazırlanmış hücre örnekleri sayesinde görüntüler, renk yoğunluğu ve hücresel yapı açısından çeşitlilik göstermektedir. Bu, modelin gerçek dünya senaryolarında genelleme kabiliyetini artırmaktadır.
+This dataset contains microscope images prepared from various clinical blood samples by the Microbiology Department of Trakya University. Due to differences in staining techniques and laboratory conditions, the images exhibit variability in color intensity and cellular structure. This diversity enhances the model’s ability to generalize in real-world scenarios.
 
-3. Hibrit Veri Seti – Birleştirilmiş Multikaynak Görüntü Havuzu
+3. Hybrid Dataset – Combined Multisource Image Pool
 
-Üçüncü veri seti, birinci ve ikinci veri setlerinin birleştirilmesiyle oluşturulmuş hibrit bir görüntü havuzudur. Bu birleşik veri seti, iki farklı coğrafi bölge ve iki farklı laboratuvar ortamından elde edilen mikroskop görüntülerini içerdiği için daha geniş varyasyon, daha fazla sınıf dengesi ve modelin daha sağlam genelleme performansı için ideal bir yapı sunar.
+The third dataset is a hybrid image pool created by merging the first two datasets. Since it includes microscope images obtained from two different geographic regions and two distinct laboratory environments, it provides broader variation, improved class balance, and a more robust foundation for achieving stronger generalization performance.
 
-
-Bu çalışma sıtmanın bir türü olan Plasmodium Falciparum türüne aittir.
-
+This study focuses on the detection of Plasmodium falciparum, one of the most severe species of malaria.
 
 
-## 🧠 Kullanılan Modeller
 
-Her veri seti için 3 ayrı model eğitildi. Performans sonuçları karşılaştırıldı.
+## 🧠 Models 
+
+Three separate models were trained for each dataset, and their performance results were compared.
 
 1. CNN (Convolutional Neural Network)
 
-Klasik evrişimsel sinir ağı mimarisi. Hafif, hızlı ve düşük parametreli bir yapı sunar.
+A classical convolutional neural network architecture offering a lightweight, fast, and low-parameter structure.
 
-Eğitildiği veri setleri:
+Trained on:
 
-Veri Seti 1: Chittagong Medical College Hospital
+Dataset 1: Chittagong Medical College Hospital
 
-Veri Seti 2: Trakya Üniversitesi Mikrobiyoloji Laboratuvarı
+Dataset 2: Trakya University Microbiology Laboratory
 
-Veri Seti 3: Hibrit veri seti
+Dataset 3: Hybrid dataset
 
 2. VGG-16 Wft
 
-VGG-16 modeli denenmiştir. VGG-16 modeli eğitilirken fine tuning işlemi uygulanmıştır.
+The VGG-16 model was experimented with, and fine-tuning was applied during training to improve feature extraction and classification performance.
 
-Eğitildiği veri setleri:
+Trained on:
 
-Veri Seti 1: Chittagong Medical College Hospital
+Dataset 1: Chittagong Medical College Hospital
 
-Veri Seti 2: Trakya Üniversitesi Mikrobiyoloji Laboratuvarı
+Dataset 2: Trakya University Microbiology Laboratory
 
-Veri Seti 3: Hibrit veri seti
+Dataset 3: Hybrid dataset
 
 3. CNN-ViT (Hybrid Model)
 
-CNN ve Vision Transformer mimarilerinin güçlü yönlerini bir araya getiren bir hibrit modeldir.
+A hybrid architecture combining the strengths of CNNs and Vision Transformers to capture both local and global image representations more effectively.
 
-Eğitildiği veri setleri:
+Trained on:
 
-Veri Seti 1: Chittagong Medical College Hospital
+Dataset 1: Chittagong Medical College Hospital
 
-Veri Seti 2: Trakya Üniversitesi Mikrobiyoloji Laboratuvarı
+Dataset 2: Trakya University Microbiology Laboratory
 
-Veri Seti 3: Hibrit veri seti
+Dataset 3: Hybrid dataset
 
-## 📊 Sonuçlar (Sadece Doğruluk- Makale nedeniyle sınırlı paylaşım)
-Her veri setine ait en iyi doğruluk sonucu paylaşılmıştır.
+## 📊 Results (Accuracy Only – Limited Due to Publication Process)
 
-Veri Seti 1'e ait en yüksek doğruluk oranı VGG-16 Wft modeline aittir. %97,06' lık doğruluk oranına ulaşılmıştır.
+The highest accuracy result for each dataset is shared below.
 
-Veri Seti 2'e ait en yüksek doğruluk oranları her modelde aynı gelmiştir. %98,18 'lik doğruluk oranına ulaşılmıştır.
+Dataset 1:
+The highest accuracy was achieved by the VGG-16 Wft model with 97.06%.
 
-Veri Seti 3'e ait en yüksek doğruluk oranı VGG-16 Wft modeline aittir. %96,85 'lik doğruluk oranına ulaşılmıştır.
+Dataset 2:
+All three models achieved the same highest accuracy: 98.18%.
 
-> Not: Diğer metrikler (loss, precision, recall, F1-score, MCC vs.) makale yayını nedeniyle paylaşılmamıştır.
+Dataset 3:
+The highest accuracy was obtained with the VGG-16 Wft model, reaching 96.85%.
 
----
+Note: Additional metrics (loss, precision, recall, F1-score, MCC, etc.) are not shared due to the ongoing publication process.
