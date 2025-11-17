@@ -1,7 +1,7 @@
 Malaria Detection with DL
 
 
-# Malaria Detection with Deep Learning
+# Malaria Detection with Deep Learning Models
 
 Bu proje, üç farklı hücresel görüntü veri seti kullanılarak sıtma enfeksiyonunun otomatik olarak tespit edilmesini amaçlayan bir derin öğrenme çalışmasını içerir. Her veri seti için ayrı bir model eğitilmiş ve sonuçlar doğruluk oranları üzerinden değerlendirilmiştir.
 
